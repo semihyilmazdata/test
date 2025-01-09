@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import {
   LandingContainer,
   LandingCTA,
@@ -13,6 +14,7 @@ import {
 } from '~/designSystem'
 
 export default function LandingPage() {
+  const { t } = useTranslation()
   const features = [
     {
       heading: `Interactive 3D Menu Visualization`,
@@ -189,10 +191,7 @@ export default function LandingPage() {
         title={`25% of diners feel disappointed when their food arrives different from expectations. Stop losing customers to menu uncertainty.`}
         painPoints={painPoints}
       />
-      <LandingHowItWorks
-        title={`Launch Your AR Menu in 4 Simple Steps`}
-        steps={steps}
-      />
+      <LandingHowItWorks title={t('landing.howItWorks.title')} steps={steps} />
       <LandingFeatures
         id="features"
         title={`Everything You Need to Revolutionize the Dining Experience`}
