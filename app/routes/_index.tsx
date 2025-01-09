@@ -17,33 +17,33 @@ export default function LandingPage() {
   const { t } = useTranslation()
   const features = [
     {
-      heading: `Interactive 3D Menu Visualization`,
-      description: `Transform your menu into an immersive AR experience with photorealistic 3D models that customers can view from every angle.`,
+      heading: `İnteraktif 3D Menü Görselleştirme`,
+      description: `Menünüzü, müşterilerin her açıdan görebileceği gerçekçi 3D modellerle artırılmış gerçeklik deneyimine dönüştürün.`,
       icon: <i className="las la-cube"></i>,
     },
     {
-      heading: `Smart Analytics Dashboard`,
-      description: `Gain valuable insights into customer preferences and ordering patterns to optimize your menu and operations.`,
+      heading: `Akıllı Analiz Paneli`,
+      description: `Menünüzü ve operasyonlarınızı optimize etmek için müşteri tercihlerini ve sipariş modellerini analiz edin.`,
       icon: <i className="las la-chart-bar"></i>,
     },
     {
-      heading: `Easy Menu Management`,
-      description: `Update your AR menu items, prices, and descriptions instantly through our intuitive dashboard.`,
+      heading: `Kolay Menü Yönetimi`,
+      description: `Kullanıcı dostu panelimiz üzerinden AR menü ögelerinizi, fiyatlarınızı ve açıklamalarınızı anında güncelleyin.`,
       icon: <i className="las la-edit"></i>,
     },
     {
-      heading: `Customer Engagement Tracking`,
-      description: `Monitor how customers interact with your AR menu items and identify your most popular dishes.`,
+      heading: `Müşteri Etkileşimi Takibi`,
+      description: `Müşterilerinizin AR menü ögeleriyle nasıl etkileşime girdiğini izleyin ve en popüler yemeklerinizi belirleyin.`,
       icon: <i className="las la-users"></i>,
     },
     {
-      heading: `Multi-language Support`,
-      description: `Break language barriers with automatic menu translation and visualization for international guests.`,
+      heading: `Çoklu Dil Desteği`,
+      description: `Uluslararası misafirleriniz için otomatik menü çevirisi ve görselleştirme ile dil bariyerlerini aşın.`,
       icon: <i className="las la-language"></i>,
     },
     {
-      heading: `Seamless Integration`,
-      description: `Works with your existing POS system and requires minimal setup - be up and running in hours, not weeks.`,
+      heading: `Sorunsuz Entegrasyon`,
+      description: `Mevcut POS sisteminizle çalışır ve minimal kurulum gerektirir - haftalar değil, saatler içinde kullanıma hazır olun.`,
       icon: <i className="las la-sync"></i>,
     },
   ]
@@ -51,174 +51,174 @@ export default function LandingPage() {
   const testimonials = [
     {
       name: `Michael Chen`,
-      designation: `Owner, Fusion Kitchen`,
-      content: `Since implementing the AR menu, our average order value has increased by 23%. Customers love seeing their dishes before ordering, and our servers spend less time explaining menu items.`,
+      designation: `Fusion Kitchen, İşletme Sahibi`,
+      content: `AR menüyü uygulamaya başladığımızdan beri ortalama sipariş değerimiz %23 arttı. Müşteriler yemeklerini sipariş etmeden önce görmeyi seviyor ve servis personelimiz menü ögelerini açıklamak için daha az zaman harcıyor.`,
       avatar: 'https://randomuser.me/api/portraits/men/5.jpg',
     },
     {
       name: `Sarah Martinez`,
-      designation: `Restaurant Manager, The Olive Grove`,
-      content: `We've seen a 35% reduction in returned dishes and much happier customers. The AR visualization helps manage expectations perfectly.`,
+      designation: `The Olive Grove, Restoran Müdürü`,
+      content: `İade edilen yemeklerde %35 azalma ve çok daha mutlu müşteriler görüyoruz. AR görselleştirme, beklentileri mükemmel şekilde yönetmemize yardımcı oluyor.`,
       avatar: 'https://randomuser.me/api/portraits/women/6.jpg',
     },
     {
       name: `David Thompson`,
-      designation: `Head Chef, Ocean Blue`,
-      content: `The analytics have been eye-opening. We've optimized our menu based on customer interaction data and increased our profits by 18%.`,
+      designation: `Ocean Blue, Baş Şef`,
+      content: `Analitik veriler gözlerimizi açtı. Müşteri etkileşim verilerine dayalı olarak menümüzü optimize ettik ve kârımızı %18 artırdık.`,
       avatar: 'https://randomuser.me/api/portraits/men/7.jpg',
     },
   ]
 
   const navItems = [
     {
-      title: `Features`,
+      title: `Özellikler`,
       link: `#features`,
     },
     {
-      title: `Pricing`,
+      title: `Fiyatlandırma`,
       link: `#pricing`,
     },
     {
-      title: `FAQ`,
+      title: `SSS`,
       link: `#faq`,
     },
   ]
 
   const packages = [
     {
-      title: `Starter`,
-      description: `Perfect for small restaurants getting started with AR menus`,
+      title: `Başlangıç`,
+      description: `AR menülerle tanışan küçük restoranlar için mükemmel`,
       monthly: 99,
       yearly: 990,
-      features: [`Up to 30 menu items`, `Basic analytics`, `Email support`],
+      features: [`30 menü ögesine kadar`, `Temel analitik`, `E-posta desteği`],
     },
     {
-      title: `Professional`,
-      description: `Most popular for growing restaurants`,
+      title: `Profesyonel`,
+      description: `Büyüyen restoranlar için en popüler paket`,
       monthly: 199,
       yearly: 1990,
       features: [
-        `Unlimited menu items`,
-        `Advanced analytics`,
-        `Priority support`,
-        `Multi-language support`,
+        `Sınırsız menü ögesi`,
+        `Gelişmiş analitik`,
+        `Öncelikli destek`,
+        `Çoklu dil desteği`,
       ],
       highlight: true,
     },
     {
-      title: `Enterprise`,
-      description: `Custom solutions for restaurant chains`,
+      title: `Kurumsal`,
+      description: `Restoran zincirleri için özel çözümler`,
       monthly: 499,
       yearly: 4990,
       features: [
-        `Custom integration`,
-        `Dedicated account manager`,
-        `Custom branding`,
-        `API access`,
+        `Özel entegrasyon`,
+        `Özel hesap yöneticisi`,
+        `Özel markalama`,
+        `API erişimi`,
       ],
     },
   ]
 
   const questionAnswers = [
     {
-      question: `How long does it take to set up the AR menu?`,
-      answer: `Setup typically takes 24-48 hours. We handle the 3D modeling of your menu items while you focus on running your restaurant.`,
+      question: `AR menünün kurulumu ne kadar sürer?`,
+      answer: `Kurulum genellikle 24-48 saat sürer. Siz restoranınızı yönetmeye odaklanırken biz menü ögelerinizin 3D modellemesini yaparız.`,
     },
     {
-      question: `Do customers need to download an app?`,
-      answer: `No! Your AR menu works directly through customers' web browsers - no app download required.`,
+      question: `Müşterilerin uygulama indirmesi gerekiyor mu?`,
+      answer: `Hayır! AR menünüz müşterilerin web tarayıcıları üzerinden doğrudan çalışır - uygulama indirmeye gerek yok.`,
     },
     {
-      question: `Can I update menu items myself?`,
-      answer: `Yes! You can easily update prices, descriptions, and even swap out menu items through our intuitive dashboard.`,
+      question: `Menü ögelerini kendim güncelleyebilir miyim?`,
+      answer: `Evet! Kullanıcı dostu kontrol panelimiz üzerinden fiyatları, açıklamaları ve hatta menü ögelerini kolayca değiştirebilirsiniz.`,
     },
     {
-      question: `What kind of support do you provide?`,
-      answer: `We offer 24/7 technical support, regular training sessions, and a dedicated account manager for enterprise clients.`,
+      question: `Ne tür bir destek sağlıyorsunuz?`,
+      answer: `7/24 teknik destek, düzenli eğitim seansları ve kurumsal müşteriler için özel hesap yöneticisi hizmeti sunuyoruz.`,
     },
   ]
 
   const steps = [
     {
-      heading: `Share Your Menu`,
-      description: `Send us your menu items and photos - we'll handle the 3D modeling.`,
+      heading: `Menünüzü Paylaşın`,
+      description: `Menü ögelerinizi ve fotoğraflarınızı gönderin - 3D modellemeyi biz halledelim.`,
     },
     {
-      heading: `Quick Setup`,
-      description: `We'll configure your dashboard and train your staff in under 48 hours.`,
+      heading: `Hızlı Kurulum`,
+      description: `48 saat içinde kontrol panelinizi yapılandırır ve personelinizi eğitiriz.`,
     },
     {
-      heading: `Go Live`,
-      description: `Launch your AR menu and watch customer engagement soar.`,
+      heading: `Yayına Alın`,
+      description: `AR menünüzü başlatın ve müşteri etkileşiminin nasıl arttığını izleyin.`,
     },
     {
-      heading: `Optimize & Grow`,
-      description: `Use analytics to refine your menu and boost profits.`,
+      heading: `Optimize Edin ve Büyüyün`,
+      description: `Analitikleri kullanarak menünüzü geliştirin ve kârınızı artırın.`,
     },
   ]
 
   const painPoints = [
     {
       emoji: `😕`,
-      title: `Customers uncertain about menu choices`,
+      title: `Menü seçimlerinden emin olamayan müşteriler`,
     },
     {
       emoji: `😤`,
-      title: `High rate of returned dishes`,
+      title: `Yüksek yemek iade oranı`,
     },
     {
       emoji: `💸`,
-      title: `Lost revenue from dissatisfied diners`,
+      title: `Memnun olmayan müşterilerden kaynaklanan gelir kaybı`,
     },
   ]
 
   return (
     <LandingContainer navItems={navItems}>
       <LandingHero
-        title={`Transform Your Menu Into an Interactive Dining Experience`}
-        subtitle={`Help customers order with confidence using stunning 3D visualizations of your dishes. Reduce returns, increase satisfaction, and boost your average order value by 20%.`}
-        buttonText={`Start Free Trial`}
+        title={`Menünüzü İnteraktif Bir Yemek Deneyimine Dönüştürün`}
+        subtitle={`Yemeklerinizin etkileyici 3D görselleştirmeleriyle müşterilerinizin güvenle sipariş vermesine yardımcı olun. İadeleri azaltın, memnuniyeti artırın ve ortalama sipariş değerinizi %20 yükseltin.`}
+        buttonText={`Ücretsiz Deneyin`}
         pictureUrl={`https://marblism-dashboard-api--production-public.s3.us-west-1.amazonaws.com/uEl6lC-bidimenu-CATw`}
         socialProof={
           <LandingSocialRating
             numberOfUsers={1000}
-            suffixText={`satisfied restaurants`}
+            suffixText={`memnun restoran`}
           />
         }
       />
-      <LandingSocialProof title={`Trusted By Leading Restaurants`} />
+      <LandingSocialProof title={`Önde Gelen Restoranlar Tarafından Tercih Ediliyor`} />
       <LandingPainPoints
-        title={`25% of diners feel disappointed when their food arrives different from expectations. Stop losing customers to menu uncertainty.`}
+        title={`Müşterilerin %25'i yemekleri beklediklerinden farklı geldiğinde hayal kırıklığına uğruyor. Menü belirsizliği yüzünden müşteri kaybetmeyi durdurun.`}
         painPoints={painPoints}
       />
       <LandingHowItWorks title={t('landing.howItWorks.title')} steps={steps} />
       <LandingFeatures
         id="features"
-        title={`Everything You Need to Revolutionize the Dining Experience`}
-        subtitle={`Powerful tools to delight your customers and grow your business`}
+        title={`Yemek Deneyimini Yeniden Şekillendirmek İçin İhtiyacınız Olan Her Şey`}
+        subtitle={`Müşterilerinizi mutlu etmek ve işinizi büyütmek için güçlü araçlar`}
         features={features}
       />
       <LandingTestimonials
-        title={`Join Hundreds of Successful Restaurants`}
-        subtitle={`See how restaurants like yours are transforming their dining experience`}
+        title={`Yüzlerce Başarılı Restorana Katılın`}
+        subtitle={`Sizin gibi restoranların yemek deneyimini nasıl dönüştürdüğünü görün`}
         testimonials={testimonials}
       />
       <LandingPricing
         id="pricing"
-        title={`Choose Your Path to Higher Profits`}
-        subtitle={`Plans that grow with your business`}
+        title={`Daha Yüksek Kârlara Giden Yolunuzu Seçin`}
+        subtitle={`İşinizle birlikte büyüyen paketler`}
         packages={packages}
       />
       <LandingFAQ
         id="faq"
-        title={`Common Questions`}
-        subtitle={`Everything you need to know about getting started`}
+        title={`Sık Sorulan Sorular`}
+        subtitle={`Başlamak için bilmeniz gereken her şey`}
         questionAnswers={questionAnswers}
       />
       <LandingCTA
-        title={`Ready to Transform Your Restaurant?`}
-        subtitle={`Join the future of dining today. Start your free trial - no credit card required.`}
-        buttonText={`Start Free Trial`}
+        title={`Restoranınızı Dönüştürmeye Hazır mısınız?`}
+        subtitle={`Bugün yemek servisinin geleceğine katılın. Kredi kartı gerekmeden ücretsiz denemeye başlayın.`}
+        buttonText={`Ücretsiz Deneyin`}
         buttonLink={`/register`}
       />
     </LandingContainer>
