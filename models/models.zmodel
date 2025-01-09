@@ -1,0 +1,104 @@
+enum UserStatus {
+    INVITED
+    VERIFIED
+}
+
+model User {
+    id              String       @id @default(uuid())
+    name            String?
+    email           String?      @unique
+    pictureUrl      String?      @default('https://i.imgur.com/ZdJSK3Y.jpeg')
+    tokenInvitation String?
+
+    status          UserStatus   @default(VERIFIED)
+
+    // this is the role of the user for the application
+    globalRole      String       @default('USER')
+    password        String?      @password @omit
+    createdAt       DateTime     @default(now())
+    updatedAt       DateTime     @updatedAt @default(now())
+
+    restaurants     Restaurant[] @relation("user")
+
+    @@auth()
+    @@allow("all", auth().id == this.id)
+    @@allow('all', auth().globalRole == 'ADMIN')
+
+    //we only allow that user to register if they don't create an admin role
+    @@allow("create", globalRole != 'ADMIN')
+    @@allow("read", true)
+}
+
+model Restaurant {
+
+    id          String     @id @default(uuid())
+    name        String?
+    description String?
+    address     String?
+    status      String?
+    logoUrl     String?
+
+    userId      String?
+    user        User?      @relation(fields: [userId], references: [id], name: "user")
+
+    menuItems   MenuItem[] @relation("restaurant")
+    showcases   Showcase[] @relation("restaurant")
+    createdAt   DateTime   @default(now())
+    updatedAt   DateTime   @updatedAt @default(now())
+    @@allow("all", true)
+}
+
+model MenuItem {
+
+    id                   String                @id @default(uuid())
+    name                 String?
+    description          String?
+    price                String?
+    category             String?
+    imageUrl             String?
+    arModelUrl           String?
+    isPublished          Boolean
+    arScale              String?
+    arPosition           String?
+
+    restaurantId         String?
+    restaurant           Restaurant?           @relation(fields: [restaurantId], references: [id], name: "restaurant")
+
+    customerInteractions CustomerInteraction[] @relation("menuItem")
+    createdAt            DateTime              @default(now())
+    updatedAt            DateTime              @updatedAt @default(now())
+    @@allow("all", true)
+}
+
+model CustomerInteraction {
+
+    id              String    @id @default(uuid())
+    interactionType String?
+    deviceType      String?
+    sessionId       String?
+    timestamp       String
+
+    menuItemId      String?
+    menuItem        MenuItem? @relation(fields: [menuItemId], references: [id], name: "menuItem")
+
+    createdAt       DateTime  @default(now())
+    updatedAt       DateTime  @updatedAt @default(now())
+    @@allow("all", true)
+}
+
+model Showcase {
+
+    id           String      @id @default(uuid())
+    title        String?
+    description  String?
+    imageUrl     String?
+    featured     Boolean
+
+    restaurantId String?
+    restaurant   Restaurant? @relation(fields: [restaurantId], references: [id], name: "restaurant")
+
+    createdAt    DateTime    @default(now())
+    updatedAt    DateTime    @updatedAt @default(now())
+    @@allow("all", true)
+}
+
